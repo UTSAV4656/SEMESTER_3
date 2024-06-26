@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var n = prompt("Enter a No. :");
+        var a = n , r , temp = 0;
+        while(a > 0){
+            r = a % 10;
+            temp = temp * 10 + r;
+            a=Math.floor(a / 10);
+        }
+        if(temp == n){
+            alert(n+" is a Palindrome Number")
+        }
+        else{
+            alert(n+" is a not Palindrome Number")
+        }    
+        
+    </script>
+</body>
+</html>

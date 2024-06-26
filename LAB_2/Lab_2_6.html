@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var n = prompt('Enter No:');
+
+        if(n===null || n===''){
+            alert("Enter no:");
+        }
+        else if(n<=0 || n>=999){
+            alert("invalid input");
+        }
+
+        
+
+        let unit = ['zero','one','two','three','four','five','six','seven','eight','nine'];
+        let teens = ['ten','eleven','twelve','therteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+        let tens = ['','','twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninety'];
+
+        let result = '';
+        if(n>=100){
+            result += unit[Math.floor(n/100)] + 'hundred';
+            n = n%100;
+        }
+        if(n>=20){
+            result += tens[Math.floor(n/10)] = '';
+            n%=10;
+        }
+        else if(n>=10){
+            result += teens[n-10] +'';
+            n = 0;
+        }
+        if(n>0){
+            result += unit[n] +'';
+        }
+        
+        document.write(result);
+
+    </script>
+</body>
+</html>
