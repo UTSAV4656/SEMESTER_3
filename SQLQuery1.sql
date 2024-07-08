@@ -2,7 +2,7 @@ USE CSE_B1_302
 SELECT * FROM DEPOSITE
 
 --Alter Operation
---Part – A:
+--Part â€“ A:
 
 --1. Add two more columns City VARCHAR (20) and Pincode INT.
 ALTER TABLE DEPOSITE
@@ -28,7 +28,7 @@ EXEC SP_RENAME 'DEPOSITE','DEPOSIT_DETAIL'
 
 SELECT * FROM DEPOSIT_DETAIL
 
---Part – B:
+--Part â€“ B:
 --1. Rename Column ADATE to AOPENDATE OF DEPOSIT_DETAIL table.
 EXEC SP_RENAME 'DEPOSIT_DETAIL.ADATE','AOPENDATE'
 
@@ -39,7 +39,7 @@ DROP COLUMN AOPENDATE
 --3. Rename Column CNAME to CustomerName.
 EXEC SP_RENAME 'DEPOSIT_DETAIL.CNAME','CustomerName'
 
---Part – C:
+--Part â€“ C:
 
 CREATE TABLE STUDENT_DETAIL(
 	Enrollment_No VARCHAR(20),
@@ -71,7 +71,7 @@ DROP COLUMN CITY
 EXEC SP_RENAME 'STUDENT_DETAIL','STUDENT_MASTER'
 
 --DELETE, Truncate, Drop Operation
---Part – A:
+--Part â€“ A:
 
 --1. Delete all the records of DEPOSIT_DETAIL table having amount greater than and equals to 4000.
 DELETE FROM DEPOSIT_DETAIL
@@ -89,7 +89,13 @@ WHERE ANO>105
 --4. Delete all the records of Deposit_Detail table. (Use Truncate)
 TRUNCATE TABLE DEPOSIT_DETAIL
 
---5. Remove Deposit_Detail table. (Use Drop)DROP TABLE DEPOSIT_DETAIL--Part – B:CREATE TABLE EMPLOYEE_MASTER(
+--5. Remove Deposit_Detail table. (Use Drop)
+DROP TABLE DEPOSIT_DETAIL
+
+--Part â€“ B:
+
+	
+CREATE TABLE EMPLOYEE_MASTER(
 	EmpNo INT,
 	EmpName VARCHAR(25),
 	JoiningDate DATETIME,
@@ -112,7 +118,7 @@ VALUES
 DELETE FROM EMPLOYEE_MASTER
 WHERE Salary>=14000
 
---2. Delete all the Employees who belongs to ‘RAJKOT’ city.
+--2. Delete all the Employees who belongs to â€˜RAJKOTâ€™ city.
 DELETE FROM EMPLOYEE_MASTER
 WHERE City='Rajkot'
 
