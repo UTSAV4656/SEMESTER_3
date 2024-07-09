@@ -16,13 +16,13 @@ VALUES
 (1011,'Keyur','Patel','techonthenet.com','Rajkot','A-303 ''Vasant Kunj'',Rajkot'),
 (1022,'Hardik','Shah','digminecraft.com','Ahmedabad','"Ram Krupa", Raiya Road'),
 (1033,'Kajal','Trivedi','bigactivities.com','Baroda','Raj bhavan plot, near garden'),
-(1044,'Bhoomi','Gajera','checkyourmath.com','Ahmedabad','"Jig’s Home", Narol'),
+(1044,'Bhoomi','Gajera','checkyourmath.com','Ahmedabad','"Jigâ€™s Home", Narol'),
 (1055,'Harmit','Mitel','@me.darshan.com','Rajkot','B-55, Raj Residenc'),
 (1066,'Ashok','Jani',NULL,'Baroda','A502, Club House Building')
 
 SELECT * FROM STUDENT
 
---1. Display the name of students whose name starts with ‘k’.
+--1. Display the name of students whose name starts with â€˜kâ€™.
 SELECT FirstName FROM STUDENT 
 WHERE FirstName LIKE 'K%'
 
@@ -34,15 +34,15 @@ WHERE FirstName LIKE '_____'
 SELECT FirstName,LastName FROM STUDENT 
 WHERE City LIKE '_____a'
 
---4. Display all the students whose last name ends with ‘tel’.
+--4. Display all the students whose last name ends with â€˜telâ€™.
 SELECT LastName FROM STUDENT 
 WHERE LastName LIKE '%tel'
 
---5. Display all the students whose first name starts with ‘ha’ & ends with‘t’.
+--5. Display all the students whose first name starts with â€˜haâ€™ & ends withâ€˜tâ€™.
 SELECT FirstName FROM STUDENT 
 WHERE FirstName LIKE 'ha%t'
 
---6. Display all the students whose first name starts with ‘k’ and third character is ‘y’.
+--6. Display all the students whose first name starts with â€˜kâ€™ and third character is â€˜yâ€™.
 SELECT FirstName FROM STUDENT 
 WHERE FirstName LIKE 'k_y%'
 
@@ -50,11 +50,11 @@ WHERE FirstName LIKE 'k_y%'
 SELECT FirstName FROM STUDENT 
 WHERE FirstName LIKE '_____' AND Website IS NULL
 
---8. Display all the students whose last name consist of ‘jer’.
+--8. Display all the students whose last name consist of â€˜jerâ€™.
 SELECT LastName FROM STUDENT 
 WHERE LastName LIKE '%jer%'
 
---9. Display all the students whose city name starts with either ‘r’ or ‘b’.
+--9. Display all the students whose city name starts with either â€˜râ€™ or â€˜bâ€™.
 SELECT City FROM STUDENT 
 WHERE City LIKE '[r,b]%'
 
@@ -66,7 +66,7 @@ WHERE Website LIKE '%.com'
 SELECT FirstName FROM STUDENT 
 WHERE FirstName LIKE '[A-H]%'
 
---12. Display all the students whose name’s second character is vowel.
+--12. Display all the students whose nameâ€™s second character is vowel.
 SELECT FirstName FROM STUDENT 
 WHERE FirstName LIKE '_[A,E,I,O,U]%'
 
@@ -74,11 +74,11 @@ WHERE FirstName LIKE '_[A,E,I,O,U]%'
 SELECT FirstName FROM STUDENT 
 WHERE FirstName LIKE '_____%' AND Website IS NULL
 
---14. Display all the students whose last name starts with ‘Pat’.
+--14. Display all the students whose last name starts with â€˜Patâ€™.
 SELECT LastName FROM STUDENT 
 WHERE LastName LIKE 'Pat%'
 
---15. Display all the students whose city name does not starts with ‘b’.
+--15. Display all the students whose city name does not starts with â€˜bâ€™.
 SELECT City FROM STUDENT 
 WHERE City NOT LIKE 'b%'
 
@@ -88,11 +88,11 @@ WHERE City NOT LIKE 'b%'
 SELECT FirstName FROM STUDENT 
 WHERE FirstName LIKE '[A,H]%'
 
---2. Display all the students whose name’s second character is vowel and of and start with H.
+--2. Display all the students whose nameâ€™s second character is vowel and of and start with H.
 SELECT FirstName FROM STUDENT 
 WHERE FirstName LIKE 'H[A,E,I,O,U]%'
 
---3. Display all the students whose last name does not ends with ‘a’.
+--3. Display all the students whose last name does not ends with â€˜aâ€™.
 SELECT LastName FROM STUDENT 
 WHERE LastName NOT LIKE '%A'
 
@@ -100,8 +100,14 @@ WHERE LastName NOT LIKE '%A'
 SELECT FirstName FROM STUDENT 
 WHERE FirstName NOT LIKE '[A,E,I,O,U]%'
 
---5. Display all the students whose website contains .netSELECT FirstName FROM STUDENT 
-WHERE Website LIKE '%.net'--PART_C--1. Display all the students whose address consist of -.
+--5. Display all the students whose website contains .net
+SELECT FirstName FROM STUDENT 
+WHERE Website LIKE '%.net'
+
+
+--PART_C
+
+--1. Display all the students whose address consist of -.
 SELECT FirstName FROM STUDENT 
 WHERE Address LIKE '%-%'
 
