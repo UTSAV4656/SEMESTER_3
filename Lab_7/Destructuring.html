@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let stu = {
+            name: "John",
+            age: 20,
+            gender: "male",
+            info: {
+                address: "Beijing",
+                phone: "123456789",
+                marks: {
+                    math: 90,
+                    english: 80
+                }
+            }
+        }
+        let {name,age,gender,info:{address,phone,marks}} = stu 
+        console.log(marks)
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        a = 10; //global scope
+        function let(){
+            var a = 20; //function scope
+            console.log("a = "+a);
+            if(true){
+                let a = 30;//block scope
+                console.log("a = "+a);
+            }
+        }
+        console.log("a = "+a)
+        let();
+    </script>
+</body>
+</html>

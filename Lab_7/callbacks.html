@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        a = parseInt(prompt("Enter first number: "));
+        b = parseInt(prompt("Enter second number: "));
+        function callback(){
+            callback_add(); 
+            callback_subtract();
+            callback_multiply();
+            callback_divide();
+        }
+        function callback_add(){
+            document.write(`Addition: ${Number(a+b)}<br>`);
+        }
+        function callback_subtract(){
+            document.write("Subtraction: "+(a-b)+"<br>");
+        }
+        function callback_multiply(){
+            document.write("Multiplication: "+(a*b)+"<br>");
+        }
+        function callback_divide(){
+            document.write("Division: "+(a/b)+"<br>");
+        }
+        callback();
+    </script>
+</body>
+</html>
