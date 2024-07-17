@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Lab_7_38{
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Stack st = new Stack();
 		System.out.print("Enter size of array : ");
-		st.N = sc.nextInt();
-		st.S = new int[st.N];
+		int N = sc.nextInt();
+		Stack st = new Stack(N);
+
 		String s = "";
 		while(!(s.equals("-1"))){
 		System.out.println("Press 1 for push");
@@ -55,8 +55,14 @@ public class Lab_7_38{
 }
 class Stack{
 	int[] S;
-	int TOP=-1;
+	int TOP;
 	int N;
+
+	public Stack(int N){
+		this.N = N;
+		this.TOP = -1;
+		this.S = new int[N];
+	}
 	public void push(int X){
 		if(TOP>=N-1){
 			System.out.println("Stack Overflow");
@@ -98,7 +104,7 @@ class Stack{
 		}
 	}
 	public void display(){
-		for(int i=0;i<TOP;i++){
+		for(int i=0;i<=TOP;i++){
 			System.out.println("S["+i+"] : "+S[i]);
 		}
 	}
