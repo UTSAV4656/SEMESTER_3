@@ -11,5 +11,6 @@ public class Lab_11{
 			sum += i*(i+1)/2;
 		}
 		System.out.println("Sum = "+sum);
+		sc.close();
 	}
 }

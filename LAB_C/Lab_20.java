@@ -25,5 +25,6 @@ public class Lab_20{
 		for(int i=0;i<n;i++){
 			System.out.println("Name "+i+" : "+names[i]);
 		}
+        sc.close();
 	}
 }
