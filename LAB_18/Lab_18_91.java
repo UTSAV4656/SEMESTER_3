@@ -33,6 +33,5 @@ public class Lab_18_91{
         }
 
         System.out.println("your element not exist in array");
-        sc.close();
     }
 }
